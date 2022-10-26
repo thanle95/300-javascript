@@ -1,0 +1,27 @@
+window.onload =  function (){
+    var spanClock = document.getElementById("clock")
+    function padStart(s){
+        return s.toString().padStart(2,0)
+    }
+    function startTimer(){
+        const date = new Date()
+        var h = date.getHours()
+        const m = date.getMinutes()
+        const s = date.getSeconds();
+        var session = "AM"
+        if(h == 0)
+            h = 12
+        else if(h > 12)
+            {
+                h-= 12
+                session = "PM"
+            }
+
+        spanClock.innerHTML = `${padStart(h)}:${padStart(m)}:${padStart(s)} ${session}`
+        setTimeout(startTimer, 1000)
+    }
+    startTimer()
+    // setInterval(startTimer, 1000)
+   
+
+}
