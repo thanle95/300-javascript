@@ -25,3 +25,17 @@ window.onload =  function (){
    
 
 }
+
+var greeting = "hey hi";
+const times = 4;
+
+if (times > 3) {
+    var greeting = "say Hello instead"; 
+    var hello = "say Hello";
+    let world = 'world'
+}
+
+console.log(greeting);
+console.log(hello);
+console.log(world);
+

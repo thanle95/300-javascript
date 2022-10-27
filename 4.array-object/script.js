@@ -56,6 +56,8 @@ console.log(students)
 // 8
 const newUsers = [...newStaffs, ...students]
 // 9
+const k = newUsers.filter(f=> f.salary >0)
+console.log(k)
 console.log(
   newUsers.map((m) => m?.salary ?? 0).reduce((sum, num) => sum + num, 0)
 );
